@@ -3,6 +3,16 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" >
+    <TextArea fx:id="textArea" VBox.vgrow="ALWAYS"/>
+    <TextField fx:id="textField" />
+    <HBox>
+        <Button fx:id="button2" text="Начислить НДС"  onAction="#getPlusNDS" />
+        <Button fx:id="button1" text="Выделить НДС"  onAction="#getMinusNDS" />
+    </HBox>
+</VBox>
